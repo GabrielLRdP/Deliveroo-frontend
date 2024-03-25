@@ -1,0 +1,14 @@
+.category .items {
+  display: flex;
+  margin: 10px 0px 10px 0px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+main {
+  background-color: #f3f5f5;
+}
+
+.category {
+  margin-bottom: 40px;
+}

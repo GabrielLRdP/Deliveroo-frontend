@@ -1,0 +1,31 @@
+.item img {
+  width: 130px;
+  object-fit: cover;
+}
+
+.item {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: calc(50% - 10px);
+  display: flex;
+  height: 160px;
+}
+
+.item .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item .description {
+  font-size: 15px;
+  line-height: 15px;
+  max-height: 50%;
+  overflow-y: hidden;
+  height: 45px;
+}
+
+.item:hover {
+  box-shadow: 4px 7px 15px -10px rgba(0, 0, 0, 0.73);
+}

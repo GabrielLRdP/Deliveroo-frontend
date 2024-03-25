@@ -1,18 +1,45 @@
 import { useState, useEffect } from "react";
-import "./index.css";
 import axios from "axios";
+import "./index.css";
+import Header from "./components/Header";
+import Presentation from "./components/Presentation";
+import Main from "./components/Main";
 
 function App() {
-  const [response, setResponse] = useEffect();
+  const [data, setData] = useState();
 
   const fetchData = async () => {
-    setResponse(
-      await axios.get("https://site--deliveroo-backend--n5fkvp4ymxn4.code.run/")
-    );
+    try {
+      const response = await axios.get(
+        "https://site--deliveroo-backend--n5fkvp4ymxn4.code.run/test"
+      );
 
-    fetchData();
+      setData(response.data);
+    } catch (error) {
+      console.log(error.response);
+    }
   };
-  return <>{response ? response : "chargement"}</>;
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return (
+    <>
+      <Header />
+      {data ? (
+        <main>
+          <Presentation
+            title={data.meta.restaurant.name}
+            description={data.meta.metatags.descriptionSocial}
+            imgSrc={data.meta.metatags.image}
+          />
+          <Main data={data} />
+        </main>
+      ) : (
+        "chargement"
+      )}
+    </>
+  );
 }
 
 export default App;

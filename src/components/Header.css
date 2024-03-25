@@ -1,0 +1,9 @@
+header {
+  padding: 10px;
+  border-bottom: solid rgb(231, 231, 231) 1px;
+  margin-bottom: 30px;
+}
+
+header img {
+  width: 150px;
+}
