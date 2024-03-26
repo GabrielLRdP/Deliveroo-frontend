@@ -1,7 +1,8 @@
 .panier {
   display: flex;
   flex-direction: column;
-
+  position: sticky;
+  top: 95px;
   gap: 15px;
   border-radius: 5px;
   background-color: white;

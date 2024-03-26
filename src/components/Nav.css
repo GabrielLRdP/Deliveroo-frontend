@@ -4,6 +4,8 @@ nav {
   border-top: solid #d1d7d7 1px;
   border-bottom: solid #d1d7d7 1px;
   margin-bottom: 30px;
+  position: sticky;
+  top: -1px;
 }
 
 nav .container {
