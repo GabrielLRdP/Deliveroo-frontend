@@ -1,8 +1,10 @@
+import logo from "../assets/images/logo-teal.svg";
+
 const Header = () => {
   return (
     <header>
       <div className="container">
-        <img src="./src/assets/images/logo-teal.svg" alt="" />
+        <img src={logo} alt="" />
       </div>
     </header>
   );
