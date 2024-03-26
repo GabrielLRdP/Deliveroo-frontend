@@ -33,6 +33,7 @@ function App() {
             description={data.meta.metatags.descriptionSocial}
             imgSrc={data.meta.metatags.image}
           />
+
           <Main data={data} />
         </main>
       ) : (

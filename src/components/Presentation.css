@@ -4,8 +4,13 @@
 }
 
 .presentation {
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: white;
-  margin-bottom: 30px;
+
   padding-bottom: 30px;
+}
+
+.presentation .left-panel,
+.presentation .right-panel {
+  background-color: white;
 }

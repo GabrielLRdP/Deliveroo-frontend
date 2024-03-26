@@ -26,7 +26,7 @@ const Category = (props) => {
     );
   });
   return (
-    <div className="category">
+    <div className="category" id={id}>
       <h2>{title}</h2>
       <div className="items">{itemList}</div>
     </div>

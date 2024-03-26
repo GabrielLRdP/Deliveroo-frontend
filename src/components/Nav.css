@@ -1,0 +1,28 @@
+nav {
+  background-color: white;
+  padding: 20px;
+  border-top: solid #d1d7d7 1px;
+  border-bottom: solid #d1d7d7 1px;
+  margin-bottom: 30px;
+}
+
+nav .container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  scrollbar-width: none;
+}
+
+nav .container:hover {
+  scrollbar-width: thin;
+}
+
+a {
+  text-decoration: none;
+  color: #00b8a9;
+  height: 2em;
+  line-height: 2em;
+  white-space: nowrap;
+}
