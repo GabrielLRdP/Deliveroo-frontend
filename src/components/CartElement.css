@@ -1,8 +1,16 @@
 .cart-element {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .cart-name {
+  width: 110px;
+  height: 2em;
   font-size: 10px;
+  overflow-y: hidden;
+}
+
+.cart-counter {
+  display: flex;
 }

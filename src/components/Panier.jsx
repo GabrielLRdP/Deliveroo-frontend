@@ -3,10 +3,17 @@ import { useState } from "react";
 import CartElement from "./CartElement";
 
 const Panier = (props) => {
-  const { cartList } = props;
+  const { cartList, setCartList } = props;
+  let subTotalPrice = 0;
+  let deliveryFee = 2.5;
+
+  cartList.forEach((element) => {
+    subTotalPrice += element.totalPrice;
+  });
+
+  const totalPrice = subTotalPrice + deliveryFee;
 
   let cartContent = [];
-  const [cartCounterList, setCartCounterList] = useState([]);
 
   if (cartList.length > 0) {
     cartContent = cartList.map((element, index) => {
@@ -17,17 +24,31 @@ const Panier = (props) => {
           quantity={element.quantity}
           title={element.title}
           price={element.price}
-          cartCounterList={cartCounterList}
-          setCartCounterList={setCartCounterList}
+          cartList={cartList}
+          setCartList={setCartList}
         />
       );
     });
   }
 
   return cartList.length > 0 ? (
-    <section>
+    <section className="panier">
       <button className="btn-validate-basket">Valider mon panier</button>
-      {cartContent}
+      <div className="cart-content">{cartContent}</div>
+      <div className="addition-details">
+        <div className="sub-total">
+          <p>Sous Total</p>
+          <p>{subTotalPrice.toFixed(2) + " €"}</p>
+        </div>
+        <div className="delivery-fee">
+          <p>Frais de livraison</p>
+          <p>{deliveryFee + " €"}</p>
+        </div>
+      </div>
+      <div className="total-price">
+        <p>Total</p>
+        <p>{totalPrice.toFixed(2) + " €"}</p>
+      </div>
     </section>
   ) : (
     <section>Votre panier est vide</section>

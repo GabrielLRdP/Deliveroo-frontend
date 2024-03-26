@@ -1,5 +1,13 @@
 const Item = (props) => {
-  const { title, imageSrc, price, description, cartList, setCartList } = props;
+  const {
+    title,
+    imageSrc,
+    price,
+    priceNum,
+    description,
+    cartList,
+    setCartList,
+  } = props;
   return (
     <div className="item">
       <div className="text">
@@ -10,9 +18,31 @@ const Item = (props) => {
       <img src={imageSrc} alt="" />
       <button
         onClick={() => {
+          const itemObject = {
+            title: title,
+            price: priceNum / 100,
+            quantity: 1,
+            totalPrice: priceNum / 100,
+          };
+          let isInCart = false;
           let newCartlist = [...cartList];
-          newCartlist.push({ title: title, price: price, quantity: 1 });
-          setCartList(newCartlist);
+          let updatedCartList = [...cartList];
+
+          updatedCartList.forEach((element) => {
+            if (itemObject.title === element.title) {
+              isInCart = true;
+              element.quantity += 1;
+              element.totalPrice = element.quantity * element.price;
+            }
+          });
+
+          if (isInCart) {
+            setCartList(updatedCartList);
+          } else {
+            newCartlist.push(itemObject);
+            setCartList(newCartlist);
+          }
+
           // console.log(cartList);
         }}
       >

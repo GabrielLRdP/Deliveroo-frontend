@@ -17,6 +17,7 @@ const Category = (props) => {
         title={element.name}
         key={element.id}
         price={element.price.formatted}
+        priceNum={element.price.fractional}
         imageSrc={element.image.url}
         description={element.description}
         setCartList={setCartList}

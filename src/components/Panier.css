@@ -1,0 +1,29 @@
+.panier {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 40px;
+  margin-right: 0px;
+  padding: 10px;
+}
+
+.cart-content,
+.addition-details,
+.total-price {
+  border-bottom: solid #d1d7d7 1px;
+  padding: 10px;
+}
+
+.total-price,
+.sub-total,
+.delivery-fee {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-price {
+  border: none;
+}

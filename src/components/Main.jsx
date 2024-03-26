@@ -28,7 +28,7 @@ const Main = (props) => {
     <div className="container">
       <section className="left-panel">{displayCategories}</section>
       <section className="right-panel">
-        <Panier cartList={cartList} />
+        <Panier cartList={cartList} setCartList={setCartList} />
       </section>
     </div>
   );
