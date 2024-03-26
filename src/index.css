@@ -7,3 +7,5 @@
 @import "./components/Main.css";
 @import "./components/Category.css";
 @import "./components/Item.css";
+@import "./components/Panier.css";
+@import "./components/CartElement.css";

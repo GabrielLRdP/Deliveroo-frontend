@@ -1,9 +1,7 @@
 import Item from "./Item";
 
 const Category = (props) => {
-  const { title, id, datas } = props;
-
-  console.log(id);
+  const { title, id, datas, setCartList, cartList } = props;
 
   const categoryItems = datas.filter((element) => {
     return (
@@ -21,6 +19,8 @@ const Category = (props) => {
         price={element.price.formatted}
         imageSrc={element.image.url}
         description={element.description}
+        setCartList={setCartList}
+        cartList={cartList}
       />
     );
   });

@@ -1,4 +1,6 @@
 import Category from "./Category";
+import Panier from "./Panier";
+import { useState } from "react";
 
 const Main = (props) => {
   const datas = props.data;
@@ -7,6 +9,8 @@ const Main = (props) => {
     return element.header !== null;
   });
 
+  const [cartList, setCartList] = useState([]);
+
   const displayCategories = categoriesListFiltered.map((element, index) => {
     return (
       <Category
@@ -14,6 +18,8 @@ const Main = (props) => {
         title={element.header}
         datas={datas.items}
         id={element.key}
+        setCartList={setCartList}
+        cartList={cartList}
       />
     );
   });
@@ -21,7 +27,9 @@ const Main = (props) => {
   return (
     <div className="container">
       <section className="left-panel">{displayCategories}</section>
-      <section className="right-panel"></section>
+      <section className="right-panel">
+        <Panier cartList={cartList} />
+      </section>
     </div>
   );
 };
