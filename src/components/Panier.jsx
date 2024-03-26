@@ -51,7 +51,7 @@ const Panier = (props) => {
       </div>
     </section>
   ) : (
-    <section>Votre panier est vide</section>
+    <section className="empty-basket">Votre panier est vide</section>
   );
 };
 
