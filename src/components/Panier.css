@@ -30,5 +30,24 @@
 }
 
 .empty-basket {
-  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.empty-basket i {
+  font-size: 40px;
+  opacity: 40%;
+}
+
+.panier .btn-validate-cart {
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.total-text {
+  font-weight: bold;
 }

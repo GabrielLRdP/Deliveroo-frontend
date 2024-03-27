@@ -9,6 +9,7 @@
   border-radius: 10px;
   width: calc(50% - 10px);
   display: flex;
+  justify-content: space-between;
   height: 160px;
 }
 
@@ -28,4 +29,15 @@
 
 .item:hover {
   box-shadow: 4px 7px 15px -10px rgba(0, 0, 0, 0.73);
+}
+
+.item button {
+  color: #00ccbc;
+  background-color: white;
+  border: solid #00ccbc 1px;
+}
+
+.item button:hover {
+  background-color: #00ccbc;
+  color: white;
 }

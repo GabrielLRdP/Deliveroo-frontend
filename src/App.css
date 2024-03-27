@@ -47,3 +47,10 @@ h3 {
 .container .right-panel {
   flex: 1;
 }
+
+button {
+  background-color: #00ccbc;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}

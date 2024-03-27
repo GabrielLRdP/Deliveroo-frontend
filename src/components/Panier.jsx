@@ -33,7 +33,7 @@ const Panier = (props) => {
 
   return cartList.length > 0 ? (
     <section className="panier">
-      <button className="btn-validate-basket">Valider mon panier</button>
+      <button className="btn-validate-cart">Valider mon panier</button>
       <div className="cart-content">{cartContent}</div>
       <div className="addition-details">
         <div className="sub-total">
@@ -46,12 +46,15 @@ const Panier = (props) => {
         </div>
       </div>
       <div className="total-price">
-        <p>Total</p>
+        <p className="total-text">Total</p>
         <p>{totalPrice.toFixed(2) + " €"}</p>
       </div>
     </section>
   ) : (
-    <section className="empty-basket">Votre panier est vide</section>
+    <section className="empty-basket">
+      <p>Votre panier est vide</p>
+      <i class="fa-solid fa-cart-shopping"></i>
+    </section>
   );
 };
 
