@@ -4,6 +4,16 @@
 
 Ce projet constitue le frontend du clone de Deliveroo, représentant la page du magasin de Subway Montorgueil. Il récupère les données réelles des menus proposés par ce magasin via une API. Le projet comprend une fonctionnalité de panier fonctionnel, bien qu'il n'y ait pas de moyen de paiement intégré.
 
+
+## Capture d'écran 
+
+![Capture](https://github.com/GabrielLRdP/Deliveroo-frontend/assets/149192169/195970c8-4230-4939-93ef-eeabd7e50368)
+
+
+## Lien
+
+Le projet est hébergé sur Netlify. Vous pouvez y accéder en suivant ce lien : [Consulter le site](https://deliveroo-gab.netlify.app)
+
 ## Fonctionnalités
 
 - **Affichage des menus:** Affiche les différents menus proposés par le magasin de Subway Montorgueil.
